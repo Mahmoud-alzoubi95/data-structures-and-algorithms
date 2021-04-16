@@ -20,16 +20,6 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
-
-  let keys = Object.keys(obj);
-  let values = Object.values(obj);
-  let arr = [];
-
-  for (let i = 0; i < keys.length; i++){
-    arr.push(`<li>${keys[i]}: ${values[i]}</li>`)
-  }
-
-  return arr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,11 +31,11 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-  let sum = arr.reduce( function(accumulator,value,idx) {
-    accumulator = accumulator + value;
-    return accumulator;
-  }, 0);
-  return sum;
+  const newArr = arr.reduce((acc,val,idx)=>{
+    return acc+val;
+
+  },0)
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,14 +51,13 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
-  let  total = arr.reduce((accumulator, value, idx) => {
-    accumulator = accumulator + arr[idx].purchasePrice;
-    return accumulator;
-  }, 0 );
-  
-return total
+  // Solution code here...
+  const sum =arr.reduce((acc,val,idx)=>{
+     const newVal =acc+val.purchasePrice
+     return newVal
+  },0)
+  return sum;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -80,14 +69,8 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-
-  let result = arr.reduce( (a) => {
-    return a + 1;
-  });
-
-  return result;
+  
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -147,12 +130,8 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  let names = arr.reduce( function(accumulator,value,idx) {
-    accumulator.push(value.name);
-    return accumulator;
-  },[]);
-  return names;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -160,14 +139,11 @@ Write a function named reversedString that takes in a string and returns a strin
 
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
+
 const reversedString = (str) => {
   // Solution code here...
-  let strArray = str.split('');
-  const newArray = strArray.reduce((accumalator, val, idx) => {
-    return accumalator += strArray[strArray.length - idx - 1];
-  }, '')
-  return newArray;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
