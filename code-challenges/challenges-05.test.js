@@ -26,7 +26,7 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-  starWarsArr.sort((a,b)=>b.height-a.height)
+  starWarsArr.sort((a,b)=> b.height-a.height)
   return starWarsArr ;
 }
 
@@ -38,9 +38,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
-  arr.splice(idx, 3);
-return arr;
-
+  arr.splice(idx,3)
+  return arr ;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,8 +50,8 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
-  let array=arr.join(' ');
-  return array ;
+ const newArray= arr.join(' ');
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,10 +69,11 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  for(let i=0; i<=str.length;i++){
-    result.push(str.slice(i,str.length));
-    }
-  return result; 
+  // Solution code here...
+  for(let i=0 ; i<=str.length;i++){
+   result.push(str.slice(i,str.length))
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -86,11 +86,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  let newArr=[];
-  for(let i=0; i<arr.length;i++){
-    newArr.push(arr.slice(i,i+1));
-    }
-    return newArr;
+  const newArray= arr.split('');
+  return newArray;
 };
 
 
@@ -138,22 +135,9 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  recipe.ingredients.forEach(item => {
-    if (item.includes('8 pounds') || item.includes('2 pounds') || item.includes('4 pounds')) {
-      result.push(item.slice(9));
-    }
-    if (item.includes('16 cups') || item.includes('1 pound')) {
-      result.push(item.slice(8));
-    }
-    if (item.includes('6 gallons') || item.includes('2 gallons')) {
-      result.push(item.slice(10));
-    }
-    if (item.includes('1 medium-sized')) {
-      result.push(item.slice(15));
-    }
-  })
   return result;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
