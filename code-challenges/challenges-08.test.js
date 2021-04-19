@@ -9,9 +9,6 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
-  let newstring=str.split('');
-  let newSplice=newstring.splice(-10);
-  return newSplice;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,8 +21,10 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
-  let newarr= arr.filter(element => Number(element));
-  return newarr;
+ let newArr= arr.filter(item=>{
+    return Number(item);
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,10 +37,11 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
-  let newarr= arr.filter(element => element.includes('and'));
-  return newarr;
+  let newArr= arr.filter(element=>{
+    return element.includes('and');
+  })
+  return newArr;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -52,11 +52,11 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here..
-  let odd = arr.filter( function(n) {
-    return (n % 2);
-  });
-  return odd;
+  // Solution code here...
+  let newArr= arr.filter(element=> {
+    return (element%2)
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,10 +72,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  let reg = /A|E|O|U|I/i;
-  let newARR= arr.filter(element => reg.test(element));
-  return newARR;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -87,10 +85,12 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-
-  let nweArr=arr.filter(element=>!forbiddenValues.includes(element));
-  return nweArr;
+ let newArr= arr.filter(element=>{
+    return !forbiddenValues.includes(element);
+  })
+  return newArr;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
@@ -132,18 +132,26 @@ const snorlaxData = {
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
+ let newArr= arr.filter(element=>{
+    return element.baseStat > minBaseStat
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
 
-Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 4. For this function, extend your solution from challenge 4 to only return the name of the stat, rather than the entire stat object.
+Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 7. For this function, extend your solution from challenge 4 to only return the name of the stat, rather than the entire stat object.
 
 For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
   // Solution code here...
+  let newArr= arr.filter(element=>{
+    return element.baseStat > minBaseStat
+  })
+  return newArr.stats.name;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -197,6 +205,7 @@ const characters = [
 
 const getCharactersWithoutChildren = (arr) => {
   // Solution code here...
+  arr.filter(element=> !element.children )
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -209,6 +218,17 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 
 const evenOddNumericValues = (arr) => {
   // Solution code here...
+  let newArr=arr.filter(element=>{
+    return Number(element)
+  })
+  const oddEven= newArr.map(item=>{
+    if(item%2===0){
+      return 'even';
+    }else{
+      return 'odd';
+    }
+  })
+return oddEven;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -304,7 +324,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should return the name of the stats that exceed that maximum', () => {
     expect(getStatName(snorlaxData.stats, 50)).toStrictEqual([ 'special-defense', 'special-attack' ]);
     expect(getStatName(snorlaxData.stats, 50).length).toStrictEqual(2);
