@@ -26,8 +26,6 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-  starWarsArr.sort((a,b)=> b.height-a.height)
-  return starWarsArr ;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,8 +36,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
-  arr.splice(idx,3)
-  return arr ;
+  arr.splice(idx,3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,8 +48,8 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
- const newArray= arr.join(' ');
-  return newArray;
+  arr.join(' ');
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,8 +68,8 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  for(let i=0 ; i<=str.length;i++){
-   result.push(str.slice(i,str.length))
+  for(let i=0 ;i<=str.length;i++){
+    result.push(str.slice(i,str.length))
   }
   return result;
 };
@@ -86,8 +84,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  const newArray= arr.split('');
-  return newArray;
+  arr.split('');
+  return arr;
 };
 
 
@@ -135,6 +133,8 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+ 
+
   return result;
 };
 
@@ -149,6 +149,12 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach(element => {
+    const x=element.split(' ');
+    const y=x.slice(2);
+    const z=y.join(' ')
+    result.push(z);
+  });
   return result;
 };
 
@@ -165,6 +171,12 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.steps.forEach(element=>{
+    const x=element.split(' ');
+    const y=x.slice(0,1);
+    const z=y.join(' ')
+    result.push(z)
+  })
   return result;
 };
 
@@ -183,6 +195,12 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
+  arr.forEach((element,idx)=>{
+    if(element%2===0){
+      arr.splice(idx,1)
+    }
+  })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -202,6 +220,13 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
+  if(numberOfCharacters<str.lenght){
+    return str.slice(0,str.lenght-numberOfCharacters);
+  }else if(numberOfCharacters<0){
+    return str;
+  }else if(numberOfCharacters>str.lenght){
+    return '';
+  }
 };
 
 
@@ -214,6 +239,7 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 const totalSumCSV = (str) => {
   let total = 0;
   // Solution code here...
+  
   return total;
 };
 
