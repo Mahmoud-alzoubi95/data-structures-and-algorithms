@@ -31,9 +31,8 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-  const newArr = arr.reduce((acc,val,idx)=>{
+  const newArr= arr.reduce((acc,val,idx)=>{
     return acc+val;
-
   },0)
   return newArr;
 };
@@ -52,11 +51,10 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
-  const sum =arr.reduce((acc,val,idx)=>{
-     const newVal =acc+val.purchasePrice
-     return newVal
+  let newArray=arr.reduce((acc,val,idx)=>{
+    return acc+val.purchasePrice;
   },0)
-  return sum;
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,7 +67,8 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  
+  let newArr=arr.reduce((acc,val,idx)=>idx+1)
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,6 +129,10 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  let newArr=arr.reduce((acc,val,idx)=>{
+    return acc.push(val.name)
+  },[])
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,6 +145,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  for(let i=str.length ; i>=0; i--){
+    const newArr=str.reduce((acc,val,idx)=>{
+      return acc.push(val[i]);
+    })
+    return newArr;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -195,6 +204,14 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   // Solution code here...
+  const newArr=arr.reduce((acc,val,idx)=>{
+    if(val.children){
+      return acc+val.children.length;
+    }else{
+      return acc;
+    }
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -228,6 +245,7 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
