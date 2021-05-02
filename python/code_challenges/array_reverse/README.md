@@ -11,4 +11,4 @@ We have been asked to not use any built-in method. So, we need to use oyr logic
 it took 30 min but the whiteboard took 2 hours
 ## Solution
 <!-- Embedded whiteboard image -->
-![](assets/array-reverse.jpg)
+![](/assets/array-reverse.jpg)
