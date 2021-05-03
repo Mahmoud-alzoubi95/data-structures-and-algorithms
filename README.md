@@ -12,9 +12,12 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
-- |  subject |  link   |
-| ---------|-----------|
+- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.\
+
+
+
+|  subject |      link     |
+| ---------|-----------    |
 | class 01 | [click here]()|
 | class 02 | [click here]()|
 | class 03 | [click here]()|
@@ -30,3 +33,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 | class 13 | [click here]()|
 | class 14 | [click here]()|
 | class 15 | [click here]()|
+
+
+
