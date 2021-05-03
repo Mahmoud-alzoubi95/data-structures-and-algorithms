@@ -26,5 +26,5 @@ jobs:
         working-directory: ./python
       - name: Run pytest
         shell: bash
-        run: python -m poetry run python -m pytest -v tests
+        run: 
         working-directory: ./python
