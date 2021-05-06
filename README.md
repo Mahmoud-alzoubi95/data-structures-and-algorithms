@@ -13,6 +13,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 ### 401 Data Structures, Code Challenges
 
 
+
  [code challenge 01]()|\
  [code challenge 02](/challenges/array_shift) |\
  [code challenge 03](/challenges/array_binary_search) |\
@@ -23,4 +24,5 @@ Each day, you'll add one new file to this folder to do your work for the day's a
  [code challenge 08]() |\
  [code challenge 09]() |\
  [code challenge 10]() |
+
 
