@@ -12,3 +12,4 @@ it took 2 hours min but the whiteboard took 1 hour
 ## Solution
 <!-- Embedded whiteboard image -->
 ![](/assets/challenge2.png)
+

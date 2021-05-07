@@ -1,19 +1,13 @@
 
+def ShiftArray(arr,n):
 
-def ShiftArray(arr,num):
-
-  newarr = []
-  i=0
-
-  while i<len(arr):
-
-    if arr[i]<num and arr[i+1]>num:
-      newarr.append(arr[i])
-      newarr.append(num)
+    if not len(arr)%2:
+       i = int(len(arr)/2)
     else:
-      newarr.append(arr[i])
-    i+=1
-  return newarr
+        i = int(len(arr)/2)+1
+    arr[i: i] = [n]
+    return arr
 
-print(ShiftArray([2,4,6,8],5))
+print(ShiftArray([2,4,6,8,9,11],10))
+
 
