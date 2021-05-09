@@ -15,5 +15,4 @@ search for element that does not exist - Worst case- o(n)
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 append: add new data to the end of the linked list
-pre_add: add new data to the biggning of the linked list
-search: similar to include method
+includes: similar to include method
