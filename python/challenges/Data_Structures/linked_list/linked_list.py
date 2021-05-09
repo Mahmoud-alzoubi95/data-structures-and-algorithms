@@ -29,15 +29,16 @@ class Linked_list:
 # Define a method called includes which takes any value as an argument and returns a boolean result
 # depending on whether that value exists as a Node’s value somewhere within the list.
 
-    def includes(self,value):
-        current_value = self.head
-        is_include = False
-        while (current_value):
-            if current_value.data == value :
-                is_include = True
-                current_value = current_value.next
-        return is_include
-
+    def includes(self,data):
+        current=self.head
+        while current:
+            if data==current.data:
+                print("True")
+                return True
+            else:
+                current=current.next
+        print("False")
+        return False
 
     def __str__(self):
         """ Returns a string representaiton of the linked list
@@ -67,4 +68,4 @@ if __name__ == "__main__":
   linked.append_node("Alzoubi")
   linked.append_node("Mahmoud")
   print(linked)
-  print(linked.includes("Alzoubi"),linked.includes("Mahmoud"),linked.includes(27))
+  print(linked.includes("khaled"),linked.includes("Mahmoud"),linked.includes(27))
