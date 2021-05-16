@@ -17,14 +17,54 @@ class Linked_list:
     def __init__(self):
         self.head = None
 
-  # define your append method
-    def append_node(self, data=None):
+  # define your insert method
+    def insert_node(self, data=None):
         new_node = Node(data)
     # Once we have a head
         if self.head:
             new_node.next = self.head  # set our current pointer to the head
         # Assign new_node to current.next
         self.head = new_node
+
+    def append_node(self,data):
+        new_node = Node(data)
+
+        if not self.head:
+            self.head = new_node
+
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_node
+
+    def insertBefore(self,data,new_data):
+        new_node = Node(new_data)
+        before = self.head
+        if not before.data == data:
+            old=before
+            while before:
+                if before.data == data:
+                    new_node.next = before
+                    old.next = new_node
+                    return
+                else:
+                    old = before
+                    before = before.next
+
+    def insertAfter(self,prev_node, data):
+        new_node = Node(data)
+        before=self.head
+        if prev_node:
+            while before:
+                if before.data==prev_node:
+                    new_node.next=before.next
+                    before.next=new_node
+                    return
+                before=before.next
+
+
+
 
 # Define a method called includes which takes any value as an argument and returns a boolean result
 # depending on whether that value exists as a Node’s value somewhere within the list.
@@ -63,9 +103,16 @@ class Linked_list:
 # Print the Nodes
 if __name__ == "__main__":
   linked = Linked_list()
-#   linked.append_node()
-  linked.append_node(27)
-  linked.append_node("Alzoubi")
-  linked.append_node("Mahmoud")
+  linked.insert_node()
+  linked.insert_node(27)
+  linked.insert_node("Alzoubi")
+  linked.insert_node("Mahmoud")
+  linked.append_node("hassan")
+  linked.append_node("ahmad")
+  linked.insertBefore(27,"khaled")
+  linked.insertAfter(27,"khaled")
   print(linked)
-  print(linked.includes("khaled"),linked.includes("Mahmoud"),linked.includes(27))
+#   print(linked.includes("khaled"),linked.includes("Mahmoud"),linked.includes(27))
+
+
+

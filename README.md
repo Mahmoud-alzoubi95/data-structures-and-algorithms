@@ -16,10 +16,10 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
  [code challenge 01]()|\
  [code challenge 02](/challenges/array_shift) |\
- [code challenge 03](/challenges/array_binary_search) |\
+ [code challenge 03](/challenges/array_binary_search)|\
  [code challenge 04]() |\
  [code challenge 05]() |\
- [code challenge 06]() |\
+ [code challenge 06](/challenges/Data_Structures/linked_list)|\
  [code challenge 07]() |\
  [code challenge 08]() |\
  [code challenge 09]() |\
