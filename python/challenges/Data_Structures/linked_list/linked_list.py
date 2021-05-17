@@ -80,6 +80,33 @@ class Linked_list:
         print("False")
         return False
 
+
+    def kth_from_the_end(self, k):
+        current = self.head
+        count = 0
+
+        if k < 0 :
+            print("wrong value")
+            return "wrong value"
+
+        while current.next:
+            current = current.next
+            count += 1
+
+        if k >= count:
+            print("out of the index")
+            return "out of the index"
+
+        current = self.head
+
+        for j in range(count - k):
+            current = current.next
+        print(current.data)
+        return current.data
+
+
+
+
     def __str__(self):
         """ Returns a string representaiton of the linked list
             1 -> 3 -> 4 -> Null
@@ -103,14 +130,15 @@ class Linked_list:
 # Print the Nodes
 if __name__ == "__main__":
   linked = Linked_list()
-  linked.insert_node()
+#   linked.insert_node()
   linked.insert_node(27)
   linked.insert_node("Alzoubi")
   linked.insert_node("Mahmoud")
-  linked.append_node("hassan")
-  linked.append_node("ahmad")
-  linked.insertBefore(27,"khaled")
-  linked.insertAfter(27,"khaled")
+#   linked.append_node("hassan")
+#   linked.append_node("ahmad")
+#   linked.insertBefore(27,"khaled")
+#   linked.insertAfter(27,"khaled")
+  linked.kth_from_the_end(5)
   print(linked)
 #   print(linked.includes("khaled"),linked.includes("Mahmoud"),linked.includes(27))
 

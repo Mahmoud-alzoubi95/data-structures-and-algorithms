@@ -20,7 +20,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
  [code challenge 04]() |\
  [code challenge 05]() |\
  [code challenge 06](/challenges/Data_Structures/linked_list)|\
- [code challenge 07]() |\
+ [code challenge 07](/challenges/Data_Structures/linked_list)|\
  [code challenge 08]() |\
  [code challenge 09]() |\
  [code challenge 10]() |

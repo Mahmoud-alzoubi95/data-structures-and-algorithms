@@ -25,3 +25,4 @@ insertafter: add new data after an element in the linked-list
 
 
 <img src="../../../../assets/codechallenge06.png">
+
