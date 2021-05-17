@@ -28,6 +28,20 @@ def test_insertafter(after_test):
     actual = f"{after_test}"
     assert excpected == actual
 
+def test_kth(k_test):
+    excpected = '0'
+    actual = f"{k_test}"
+    assert excpected == actual
+
+def test_kth_negative_case(k_test_negtivecase):
+    excpected = "wrong value"
+    actual = f"{k_test_negtivecase}"
+    assert excpected == actual
+
+def test_kth_over_case(k_test_overcase):
+    excpected = "out of the index"
+    actual = f"{k_test_overcase}"
+    assert excpected == actual
 
 @pytest.fixture
 def list_test():
@@ -40,6 +54,37 @@ def list_test():
     # linked.insertBefore(1,"khaled")
     # linked.insertAfter(1,"khaled")
     return linked
+
+@pytest.fixture
+def k_test():
+    linked = Linked_list()
+    # linked.append_node()
+    linked.insert_node(0)
+    linked.insert_node(1)
+    linked.insert_node(25)
+    # linked.append_node("ahmad")
+    # linked.insertBefore(1,"khaled")
+    return linked.kth_from_the_end(0)
+
+@pytest.fixture
+def k_test_negtivecase():
+    linked = Linked_list()
+    linked.insert_node(0)
+    linked.insert_node(1)
+    linked.insert_node(25)
+    # linked.append_node("ahmad")
+    # linked.insertBefore(1,"khaled")
+    return linked.kth_from_the_end(-3)
+
+@pytest.fixture
+def k_test_overcase():
+    linked = Linked_list()
+    linked.insert_node(0)
+    linked.insert_node(1)
+    linked.insert_node(25)
+    # linked.append_node("ahmad")
+    # linked.insertBefore(1,"khaled")
+    return linked.kth_from_the_end(6)
 
 @pytest.fixture
 def append_test():
