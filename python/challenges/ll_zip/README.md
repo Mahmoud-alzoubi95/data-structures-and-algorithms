@@ -7,9 +7,9 @@ input: two linked list output: 1 linked list merged (zipped) in pair form
 ## Approach & Efficiency
 pass two nodes from two linked list the nmerge it as one linked list
 
-## whiteBoard
+## WhiteBoard
 
-<img src="../../../../assets/ch08.png">
+<img src="../../../assets/ch08.png">
 
 ## solution
 ```
