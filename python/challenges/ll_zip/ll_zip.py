@@ -1,5 +1,5 @@
-# from python.challenges.Data_Structures.linked_list.linked_list import Node,Linked_list
-from linked_list import Node,Linked_list
+from challenges.Data_Structures.linked_list.linked_list import Linked_list
+# from linked_list import Linked_list
 
 def zipLists(list1,list2):
     if not list1:
