@@ -2,6 +2,9 @@ from challenges.Data_Structures.linked_list.linked_list import Linked_list
 # from linked_list import Linked_list
 
 def zipLists(list1,list2):
+    """ this method use to merge tow linked list, it took tow args,
+    one of thim provide th first list and the other arg take the second kist
+    """
     if not list1:
         return list2
     elif not list2:
